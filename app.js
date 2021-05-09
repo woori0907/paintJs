@@ -1,12 +1,15 @@
 const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext("2d");
+const colors = document.getElementsByClassName("jsColor");
+
 
 canvas.width = 700;
 canvas.height = 700;
 ctx.strokeStyle = "#2c2c2c";
 ctx.lineWidth = 2.5;
 
-let painting = true;
+let painting = false;
+
 function onMouseMove(event){
     // clientX, Y : 윈도우 전체 안에서의 좌표
     // canvas 안에서와 윈도우에서의 좌표값이 다르기 때문에 offsetX,Y 사용하해야함
@@ -32,6 +35,10 @@ function stopPainting(){
   
 }
 
+function handleColorClick(event) {
+    const color = event.target.style.backgroundColor;
+    ctx.strokeStyle = color;}
+
 function onMouseDown(event){
   painting = true;
 }
@@ -48,6 +55,10 @@ function onMouseUp(event){
 if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", onMouseDown);
-    canvas.addEventListener("mouseup"), onMouseUp);
+    canvas.addEventListener("mouseup", onMouseUp);
     canvas.addEventListener("mouseleave", stopPainting);
 }
+
+Array.from(colors).forEach(color =>
+    color.addEventListener("click", handleColorClick)
+  );
