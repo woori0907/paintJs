@@ -8,7 +8,7 @@ canvas.height = 700;
 ctx.strokeStyle = "#2c2c2c";
 ctx.lineWidth = 2.5;
 
-let painting = false; 
+let painting = false;
 
 function onMouseMove(event){
     // clientX, Y : 윈도우 전체 안에서의 좌표
