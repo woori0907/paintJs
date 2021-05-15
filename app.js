@@ -17,7 +17,7 @@ function onMouseMove(event){
     const y = event.offsetY; 
     
     if(!painting){
-      ctx.beginPath();
+      ctx.beginPath(); 
       ctx.moveTo(x, y);
     }else{
       ctx.lineTo(x, y);
