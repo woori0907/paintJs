@@ -14,7 +14,7 @@ function onMouseMove(event){
     // clientX, Y : 윈도우 전체 안에서의 좌표
     // canvas 안에서와 윈도우에서의 좌표값이 다르기 때문에 offsetX,Y 사용하해야함
     const x = event.offsetX;
-    const y = event.offsetY;
+    const y = event.offsetY; 
     
     if(!painting){
       ctx.beginPath();
