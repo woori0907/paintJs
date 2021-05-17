@@ -83,7 +83,7 @@ Array.from(colors).forEach(color =>
     color.addEventListener("click", handleColorClick)
   );
 
-if(range){
+if(range){ 
   range.addEventListener("input", handRangeChange);
 }
 
