@@ -87,6 +87,6 @@ if(range){
   range.addEventListener("input", handRangeChange);
 }
 
-if(mode){
+if(mode){ 
   mode.addEventListener("click", handleModeClick);
 }
